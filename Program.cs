@@ -24,9 +24,9 @@ app.MapGet("/todo/{id}", (int id) => TodoService.GetTodo(id));
 
 app.Run();
 
-class TodoItem
-{
-    public int Id {get; set;}
-    public string? Item {get; set;}
-    public bool IsComplete {get; set;}
-}
+// class TodoItem
+// {
+//     public int Id {get; set;}
+//     public string? Item {get; set;}
+//     public bool IsComplete {get; set;}
+// }

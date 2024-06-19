@@ -1,3 +1,6 @@
+using Microsoft.AspNetCore.Http.HttpResults;
+using Microsoft.AspNetCore.Mvc;
+
 namespace TodoApi.Services;
 public record Todo
 {
@@ -23,5 +26,11 @@ public class TodoService
     public static Todo ? GetTodo(int id)
     {
         return todos.SingleOrDefault(todo => todo.Id == id);
+    }
+
+    public static void UpdateTodo(int id)
+    {
+        var index = todos.FindIndex(todo => todo.Id == id);
+        // This method needs to be looked at again.
     }
 }
